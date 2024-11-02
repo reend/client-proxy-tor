@@ -82,8 +82,8 @@ int main(int argc, char* argv[]) {
 
 	memset(tmp, 0, 512);
 	snprintf(tmp, 511, 
-	"HEAD / HTTP/1.0\r\n",
-	"Host: www.google.com\r\n",
+	"HEAD / HTTP/1.0\r\n"
+	"Host: www.networktechnology.org\r\n"
 	"\r\n");
 	write(s, tmp, strlen(tmp));
 
