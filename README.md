@@ -1,5 +1,11 @@
 program uses a rfc socks4
 
+start tor with
+sudo systemctl start tor
+sudo systemctl enable tor
+
+then
+
 1) make
 
 then
