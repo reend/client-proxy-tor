@@ -26,13 +26,13 @@ This command will compile the `toralize.c` file into a shared object `toralize.s
 
 ## Usage
 
-To redirect a network request through Tor, use the `toralize` script. For example, to access a Google IP (you can use any IP address):
+To redirect a network request through Tor, use the `toralize` script.
 
 ```bash
-./toralize curl http://172.217.16.164
+./toralize curl http://ANY_VALID_IP
 ```
 
-- `172.217.16.164` is an IP address for Google. Using an IP address instead of a hostname can enhance privacy by avoiding DNS lookups.
+- Using an IP address instead of a hostname can enhance privacy by avoiding DNS lookups.
 
 ### Note
 
