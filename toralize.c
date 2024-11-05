@@ -22,7 +22,6 @@ int connect(int s2, const struct sockaddr *sock2, socklen_t addrlen) {
 	Res *res;
 	char buf[ressize];
 	int success;
-	char tmp[512];
 	int (*p)(int, const struct sockaddr*, socklen_t);
 
 	p = dlsym(RTLD_NEXT, "connect");
@@ -45,7 +44,7 @@ int connect(int s2, const struct sockaddr *sock2, socklen_t addrlen) {
 		return -1;
 	}
 
-	printf("Connected to proxy\n");
+	printf("Connected to TOR proxy\n");
 	req = request((struct sockaddr_in*)sock2);
 	write(s, req, reqsize);
 
@@ -71,7 +70,7 @@ int connect(int s2, const struct sockaddr *sock2, socklen_t addrlen) {
 		return -1;
 	}
 	
-	printf("Connected through the proxy\n");
+	printf("Connected through the TOR proxy to destination server\n");
 
 	dup2(s, s2);
 	free(req);
